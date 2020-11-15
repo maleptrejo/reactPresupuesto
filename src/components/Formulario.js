@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 
-const Formulario = ({guardarGasto, guardarCrearGasto}) => {
+const Formulario = ({guardarGasto, guardarCrearGasto, presupuesto, restante}) => {
 
     //definir states
     const [nombre, guardarNombre]=useState('');
@@ -17,10 +17,12 @@ const agregarGasto =e =>{
     e.preventDefault();
 
     //validar
-    if(cantidad <1 || isNaN(cantidad) || nombre.trim()==='') {
+    if(cantidad <1 || isNaN(cantidad) || nombre.trim()==='' || cantidad >restante) {
         guardarError(true);
         return;
-    }
+    } 
+
+
     guardarError(false);
 
     //construir el gasto (nombre, cantidad, se escribe así porqe llave y valor tienen el mismo str)

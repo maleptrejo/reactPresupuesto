@@ -23,6 +23,8 @@ const Pregunta = ({guardarPresupuesto, guardarRestante, actualizarPregunta}) => 
             guardarError(true);
             return;
         }
+
+
         //qué hacer si pasa validación
         guardarError(false);
         guardarPresupuesto(cantidad);
@@ -54,7 +56,7 @@ const Pregunta = ({guardarPresupuesto, guardarRestante, actualizarPregunta}) => 
 }
 
 //documentando los componentes
-ControlPresupuesto.propTypes={
+Pregunta.propTypes={
     guardarPresupuesto: PropTypes.number.isRequired,
     guardarRestante: PropTypes.number.isRequired,
     actualizarPregunta: PropTypes.number.isRequired,

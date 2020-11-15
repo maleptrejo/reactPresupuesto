@@ -60,6 +60,8 @@ function App() {
            <Formulario 
            guardarGasto={guardarGasto}
            guardarCrearGasto={guardarCrearGasto}
+           presupuesto={presupuesto}
+           restante={restante}
            />
          </div>
          <div className="one-half column">
